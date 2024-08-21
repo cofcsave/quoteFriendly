@@ -1,0 +1,503 @@
+@import "variables";
+
+
+form .website{ display:none; }
+
+label {
+  @media screen and (max-width: $regular) {
+    font-size: 1rem;
+  }
+}
+input {
+  margin-bottom: 20px;
+}
+label input {
+  font-size: 1.2rem;
+}
+.form-container {
+  max-width: 1100px; 
+  width: 80%;
+  margin: auto;
+  @media screen and (max-width: $regular) {
+    width:90%;
+  }
+}
+
+.tab-noflorida {
+  display: none;
+  text-align: center;
+}
+.radio-container {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.2rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+    padding: 20px 40px 20px 70px;
+    border-radius: 10px;
+    display: flex;
+    margin: 20px 15px;
+    &.no-shadow {
+      box-shadow: none;
+    }
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    .checkmark {
+      position: absolute;
+      top: 50%;
+      left: 30px;
+      height: 25px;
+      width: 25px;
+      border: 1px solid $primary-drk-gray;
+      border-radius: 50%;
+      transform: translatey(-50%);
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      &.check-box {
+        border-radius: 2px;
+      }
+  }
+  .checkmark:after {
+    top: 4px;
+      left: 4px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: $primary-blue;
+  }
+  .check-box:after {
+    left: 11px;
+    top: -10px;
+    width: 11px;
+    height: 24px;
+    border: solid #00a1dd;
+    border-width: 0 5px 5px 0;
+    -webkit-transform: rotate( 45deg );
+    transform: rotate( 45deg );
+    border-radius: 0px;
+    background: none;
+  }
+  @media screen and (max-width: $reg-mobile) {
+    padding: 10px 20px 10px 70px;
+  }
+}
+.padding-top {
+  margin-top: 30px;
+}
+.left-border {
+  width:1px;
+  background-color: $primary-drk-gray;
+  @media screen and (max-width: $regular) {
+    display: none;
+  }
+}
+.dropdown-container {
+  text-align: center;
+}
+.dropdowns {
+  position: relative;
+  width:20%;
+  display: inline-block;
+  margin:0 15px;
+}
+.radio-container #over-fifty {
+  font-size: 20px;
+}
+.align-bottom {
+  align-items: flex-end;
+  .input-50 {
+    text-align: center;
+  }
+  input {
+    max-width: 150px;
+  }
+}
+.radio-picCard {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 100px;
+  align-items: flex-end;
+  .radio-card-label {
+    width:20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    p {
+      font-size: 20px;
+      @media screen and (max-width: $regular) {
+        font-size: 14px;
+      }
+    }
+    @media screen and (max-width: $regular) {
+      width:45%;
+      margin-bottom: 50px;
+    }
+  }
+  .radio-container {
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 5px;
+    cursor: pointer;
+    
+  }
+  img {
+    width:80%;
+    cursor: pointer;
+  }
+  .checkmark {
+    bottom: -40px;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.houseAgeRadio {
+  margin-top: 40px;
+  @media screen and (max-width: $regular) {
+      flex-wrap: wrap;
+    .radio-container {
+      width: 70%;
+    margin-top: 10px;
+    }
+  }
+}
+.divider {
+  display: block;
+  width:80%;
+  height: 1px;
+  background-color: $light-gray;
+  margin:auto;
+}
+.dropdowns:after {
+    content: '\25BE';
+    font: normal normal normal 17px/1 FontAwesome;
+    color: #0ebeff;
+    right: 11px;
+    top: 6px;
+    height: 34px;
+    padding: 15px 0px 0px 8px;
+    position: absolute;
+    pointer-events: none;
+}
+
+/* IE11 hide native button (thanks Matt!) */
+select::-ms-expand {
+display: none;
+}
+
+.dropdowns select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add some styling */
+  border: 1px solid #9b9b9b;
+  display: block;
+  height: 50px;
+  float: right;
+  margin: 5px 0px;
+  padding: 0px 24px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: $primary-drk-gray;
+  background-color: #ffffff;
+  background-image: none;
+  -ms-word-break: normal;
+  word-break: normal;
+  border-radius: 10px;
+  width:100%;
+}
+
+
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.radio-yesno{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.progressBarContainer {
+  width:80%;
+  max-width: 900px;
+  margin: 60px auto;
+  background-color:$light-blue;
+  height: 15px;
+  border-radius: 40px;
+  overflow: hidden;
+  .progressBar {
+    background-color:$primary-blue;
+    height: 100%;
+  }
+  .progress-1 {
+    width:12.5%;
+  }
+  .progress-2 {
+    width:25%;
+  }
+  .progress-3 {
+    width:37.5%;
+  }
+  .progress-4 {
+    width:50%;
+  }
+  .progress-5 {
+    width:62.5%;
+  }
+  .progress-6 {
+    width:75%;
+  }
+  .progress-7 {
+    width:87.5%;
+  }
+  .progress-8 {
+    width:100%;
+  }
+}
+
+.question {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  .arrow-up {
+    width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  
+  border-bottom: 25px solid $light-gray;
+  margin:auto;
+  }
+  .questionBubble {
+    padding:50px;
+    background-color:$light-gray;
+    width:90%;
+    max-width:700px;
+    font-family: 'Sanchez', serif;
+    margin:auto;
+    color:$primary-drk-gray;
+    border-radius: $borderRadius;
+    text-align: center;
+    
+    @media screen and (max-width: $regular) {
+      padding:20px;
+      width:100%;
+    }
+  }
+}
+
+#submitBtn {
+  display: none;
+}
+
+p.question-text {
+  margin:0;
+  display: inline-block;
+  text-align: left;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  font-family: "Sanchez",serif;
+  @media screen and (max-width: $regular) {
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+  }
+}
+
+.agent-avatar {
+  width: 20%;
+  max-width: 190px;
+  text-align: center;
+  margin: auto;
+  img {
+    width: 100%;
+  }
+  @media screen and (max-width: $regular) {
+    width: 50%;
+    max-width:150px;
+  }
+}
+h1 {
+  text-align: center;  
+}
+
+input, textarea {
+  padding: 15px;
+  width: 100%;
+  font-size: 17px;
+  border: 1px solid #aaaaaa;
+  border-radius: 10px;
+  width:100%;
+}
+
+.input-flex {
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: $regular) {
+    flex-wrap: wrap;
+  }
+  .input-50 {
+    width:47%;
+    @media screen and (max-width: $regular) {
+      width:100%;
+    }
+  }
+  .input-30 {
+    display: inline-block;
+    width:29%;
+    @media screen and (max-width: $regular) {
+      width:50%;
+    }
+  }
+  .input-70 {
+    display: inline-block;
+    width:69%;
+    @media screen and (max-width: $regular) {
+      width:100%;
+    }
+  }
+  .input-100 {
+    display: block;
+    width:100%;
+  }
+  // &.not-first-row {
+  //   margin-top: 50px;
+  // }
+}
+
+.contain-600 {
+  max-width: 600px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.contain-500 {
+  max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contain-400 {
+  max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+.buttons-tabs {
+  margin-top: 60px;
+  text-align: center;
+}
+
+button, #prevBtn, #nextBtn, .button {
+  background-color: #00A1DD;
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 26px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 7px;
+  &.btn-cnt {
+    display: inline-block;
+    margin:50px auto;
+  }
+}
+
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: $light-gray;
+  color:$primary-drk-gray;
+}
+
+.label-input {
+  color: $primary-drk-gray;
+  margin-bottom:10px;
+  display: block;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(212, 212, 212);
+  opacity: 1; /* Firefox */
+}
+
+#carType {
+  .divider {
+    margin-bottom: 50px;
+  }
+  .input-flex {
+    @media screen and (max-width: $regular) {
+      width:100%;
+    }
+  }
+}
+
+.last-legal {
+  color: #aaaaaa;
+    font-weight: 300;
+    font-size: 1rem;
+    margin-top: 50px;
+  display: none;
+  &.contact-legal {
+    display: block;
+  }
+}
+
+
+.contact-header {
+  text-align: center;
+  margin: 30px auto;
+  .question-text {
+    text-align: center;
+  }
+}
+
+.contact-us-form {
+  position: relative;
+  padding-top: 10px;
+  margin-top: 50px;
+  max-width: 750px;
+}
+
+.contact-gray-box {
+  background-color: $light-gray;
+  border-radius: $borderRadius;
+  position: absolute;
+  top:0;
+  width:100%;
+  height: 85%;
+  z-index: -1;
+}

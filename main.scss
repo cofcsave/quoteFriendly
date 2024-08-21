@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&family=Sanchez&display=swap');
+
+@import "variables";
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color:$primary-drk-gray;
+}
+h1, h2, h3 {
+    font-family: 'Sanchez', serif;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 3.4rem;
+    font-weight: 300;
+    @media screen and (max-width: $regular) {
+        font-size: 2rem;
+      }
+      @media screen and (max-width: $reg-mobile) {
+        font-size: 1.4rem;
+      }
+}
+
+h2 {
+    font-size: 2.8rem;
+      line-height: 3.6rem;
+      margin-top: 0;
+      @media screen and (max-width: $regular) {
+        font-size: 2rem;
+        line-height: 2.6rem;
+      }
+      @media screen and (max-width: $reg-mobile) {
+        font-size: 1.6rem;
+        line-height: 2.3rem;
+      }
+}
+
+p {
+    font-size: 1.2rem;
+    @media screen and (max-width: $regular) {
+        font-size: 1rem;
+      }
+}
+.contain-1100 {
+    max-width: 1100px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:0 20px;
+  }
+.button {
+    padding:10px 40px;
+    background-color: $primary-blue;
+    color:#fff;
+    display: inline-block;
+    border-radius: $borderRadius;
+    cursor:pointer;
+    &:hover {
+        box-shadow: $shadow;
+    }
+}
+
+.center-btn {
+    text-align:center;
+    margin-top:30px;
+}
+
+nav {
+    padding: 30px;
+    max-width: 1100px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .qk-nav-logo {
+       
+        @media screen and (max-width: $regular) {
+            margin:auto;
+            margin-bottom: 20px;
+          }
+    }
+    .nav-links {
+        a {
+        color:$primary-drk-gray;
+        text-decoration: none;
+        margin:0;
+        padding: 20px;
+            &:hover {
+                color:$primary-blue;
+            }
+        }
+        .nav-btn {
+            background-color: $primary-blue;
+            color:#fff;
+            display: inline-block;
+            padding: 10px 0;
+            border-radius: $borderRadius;
+            a {
+                color:#fff;
+            }
+            &:hover {
+                box-shadow: $shadow;
+            }
+            @media screen and (max-width: $regular) {
+                background-color: transparent;
+                padding:0px;
+                a {
+                    color:$primary-drk-gray;
+                    &:hover {
+                        color:$primary-blue;
+                    }
+                }
+                &:hover {
+                    box-shadow: none;
+                }
+              }
+        }
+        @media screen and (max-width: $regular) {
+            margin:auto;
+            border-bottom: 1px solid $primary-drk-gray;
+            padding-bottom: 15px;
+            a {
+                padding:0 10px;
+            }
+          }
+          @media screen and (max-width: $regular) {
+              width:100%;
+              text-align: center;
+              max-width: 500px;
+          }
+    }
+    @media screen and (max-width: $regular) {
+        flex-wrap: wrap;
+        padding: 15px;
+      }
+}
+footer {
+    margin:auto;
+    text-align: center;
+    margin-top: 150px;
+    .qk-footer-logo {
+        margin:auto;
+    }
+    .footer-divider {
+        height: 1px;
+        background-color: $primary-drk-gray;
+        width:80%;
+        margin:auto;
+        max-width: 900px;
+        margin-bottom: 50px;
+    }
+    .bottom-nav {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0 40px;
+        a {
+            color:$primary-drk-gray;
+            text-decoration: none;
+            margin:0 20px;
+            @media screen and (max-width: $reg-mobile) {
+                margin: 15px;
+              }
+        }
+        @media screen and (max-width: $reg-mobile) {
+            flex-wrap: wrap;
+          }
+    }
+    .bottom-legal {
+        color:#BCBCBC;
+        margin-bottom: 40px;
+        a {
+            color:#BCBCBC;
+        }
+    }
+    @media screen and (max-width: $regular) {
+        margin-top: 50px;
+      }
+}
+
+
+
+
+select {
+    font-family: 'Poppins', sans-serif;
+}

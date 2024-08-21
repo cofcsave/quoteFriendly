@@ -1,0 +1,232 @@
+@import "variables";
+
+.background-light-blue {
+    background-color: $light-blue;
+    position: absolute;
+    width: 52%;
+    right: 0;
+    top: 0;
+    height: 80vh;
+    z-index: -1;
+    border-radius: 0 0 0 50px;
+    @media screen and (max-width: $regular) {
+        height:70vh
+      }
+      @media screen and (max-width: $reg-mobile) {
+        height:30vh;
+        width:100%;
+        right:auto;
+        left:0;
+        border-radius: 0;
+      }
+}
+.hero-section {
+    .hero-bkg {
+        width: 90%;
+        position: relative;
+        max-width: 1100px;
+        background-image: url(images/home-background.png);
+        background-size: cover;
+        margin:auto;
+        border-radius: $borderRadius;
+        .hero-content {
+            color:#fff;
+            width: 80%;
+            font-weight: 300;
+            text-align: center;
+            padding:30px;
+            margin: auto;
+            .hero-squares {
+                display: flex;
+                justify-content: space-between;
+                margin:45px auto;
+                width:85%;
+                margin-bottom: -13%;
+                a {
+                    width:30%;
+                    text-align: center;
+                    img {
+                        width:98%;
+                        box-shadow: $lgshadow;
+                        border-radius: $borderRadius;
+                        &:hover {
+                            width: 100%;
+                            transition: all .4s ease;
+                            -webkit-transition: all .4s ease;
+                        }
+                    }
+                }
+                @media screen and (max-width: $regular) {
+                    width:100%;
+                  }
+            }
+            @media screen and (max-width: $regular) {
+                width:95%;
+                padding:15px;
+              }
+        }
+    }
+}
+
+.agent {
+    margin-top: 300px;
+    position: relative;
+    .lightBlueBack {
+        height: 120%;
+        width:40%;
+        background-color: $light-blue;
+        position: absolute;
+        border-radius: 0 50px 50px 0;
+        z-index: -1;
+        top: -10%;
+    }
+    @media screen and (max-width: $reg-mobile) {
+        margin-top: 130px;
+      }
+    .agent-container {
+        max-width: 1100px;
+        width:80%;
+        margin:auto;
+        display: flex;
+        flex-wrap: wrap;
+        .agent-img {
+            width:50%;
+            img {
+                width:100%;
+                border-radius: $borderRadius;
+            }
+            @media screen and (max-width: $regular) {
+                width:35%;
+              }
+              @media screen and (max-width: $reg-mobile) {
+                width:90%;
+                margin:auto;
+                height: 247px;
+                overflow: hidden;
+                border-radius: $borderRadius;
+              }
+        }
+        .agent-info {
+            width: 50%;
+            display: flex;
+            padding-left:20px;
+            justify-content: center;
+            align-items: center;
+            .agent-info-contain {
+                width:84%;
+            }
+            @media screen and (max-width: $regular) {
+                width:65%;
+              }
+              @media screen and (max-width: $reg-mobile) {
+                width:100%;
+                padding-left: 0;
+                padding-top:20px;
+              }
+        }
+        @media screen and (max-width: $reg-mobile) {
+            width:100%;
+            margin: auto;
+          }
+    }
+}
+
+.howitworks {
+    margin-top: 200px;
+    h2 {
+        text-align: center;
+    }
+    .works-contain {
+        display: flex;
+        justify-content: center;
+        .worksBullets {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            .bulletLine {
+                position:absolute;
+                width: 6px;
+                height: 100%;
+                background-color: #eeeeee;
+                left: 15.5%;
+                z-index: -1;
+                @media screen and (max-width: $regular) {
+                    display:none;
+                  }
+            }
+            .bullet {
+                display: flex;
+                align-items: center;
+                padding-right: 100px;
+                margin: 40px;
+                img {
+                    max-width:110px;
+                    margin-right: 20px;
+                    width:30%;
+                    min-width: 40px;
+                    @media screen and (max-width: $regular) {
+                        width:20%;
+                        margin:auto;
+                      }
+                }
+                @media screen and (max-width: $regular) {
+                    padding-right: 0;
+                    flex-wrap: wrap;
+                    margin: 10px;
+                    text-align: center;
+                    p {
+                        width:100%;
+                    }
+                  }
+                  @media screen and (max-width: $reg-mobile) {
+                    p {
+                        width:100%;
+                    }
+                  }
+            }
+        }
+        .worksImg {
+            img {
+                max-width:300px;
+                width:100%;
+            }
+            @media screen and (max-width: $reg-mobile) {
+                display: none;
+              }
+        }
+        @media screen and (max-width: $reg-mobile) {
+            width:90%;
+            margin: auto;
+          }
+    }
+    @media screen and (max-width: $regular) {
+        margin-top: 100px;
+      }
+}
+.blue-txt {
+    color:$primary-blue
+}
+.mission {
+    margin-top: 200px;
+    .missionSquare {
+        background-color:$light-blue;
+        border-radius: 50px;
+        padding:100px 50px;
+        max-width: 1100px;
+        width:80%;
+        margin:auto;
+        text-align: center;
+        h2 {
+            text-align: center;
+        }
+        a {
+            text-align: center;
+        }
+        @media screen and (max-width: $regular) {
+            padding:30px;
+          }
+    }
+    @media screen and (max-width: $regular) {
+        margin-top: 50px;
+      }
+}
